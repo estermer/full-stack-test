@@ -1,0 +1,21 @@
+<h1><%= title %></h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Sport</th>
+        <th>Year</th>
+        <th>Action</th>
+    </tr>
+    <% schedules.forEach(function(schedule){ %>
+        <tr>
+            <td><%= schedule.id %></td>
+            <td><%= schedule.title %></td>
+            <td><%= schedule.sport %></td>
+            <td><%= schedule.year %></td>
+            <td><a href="schedules/details/<%= schedule.id %>">View</a></td>
+        </tr>
+    <% }) %>
+    
+</table>
