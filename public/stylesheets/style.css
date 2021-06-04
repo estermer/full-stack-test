@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+a.breadcrumb-disabled, .breadcrumb-separator { 
+  color: rgba(0,0,0,.38); 
+}
+
+.breadcrumb-separator {
+  margin: 0 3px;
+}
