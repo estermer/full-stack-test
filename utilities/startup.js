@@ -20,9 +20,9 @@ async function createTable() {
 
 async function insertSports() {
     var sql = `
-    INSERT INTO sports (fixed_title, sport_id, play_year)
-    VALUES (1, 'Baseball'),
-           (2, 'Football')
+    INSERT INTO sports (fixed_title)
+    VALUES ('Baseball'),
+           ('Football')
     `;
     return await dataAccess.Execute(sql);
 }
