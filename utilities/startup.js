@@ -6,7 +6,7 @@ async function createTable() {
     CREATE TABLE IF NOT EXISTS schedules (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         fixed_title TEXT,
-        sport TEXT,
+        sport_id INTEGER,
         play_year TEXT
     );
 
