@@ -12,7 +12,7 @@ async function createTable() {
 
     CREATE TABLE IF NOT EXISTS sports (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        fixed_title TEXT,
+        fixed_title TEXT
     );
     `
     return await dataAccess.Execute(sql);
