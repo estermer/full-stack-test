@@ -9,8 +9,8 @@ Things this test *_is not_*:
 
 Scenario:
 
-1. A request comes into your task list that the schedules page isn't showing all the columns it should.
-2. When clicking on View from the schedules list view the details page is throwing a stack trace.
-3. The overall site looks pretty bad, add some Bootstrap to make it look a little nicer.
+1. The `schedules list view` isn't showing all the columns it should.
+2. When clicking on the View button from the `schedules list view` the `schedule detail view` is throwing a stack trace.
+3. Both views are plain looking, add some Bootstrap to make them more readable.
 
 Navigate over the the schedules page and see if you can solve the problem.
