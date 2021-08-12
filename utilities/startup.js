@@ -8,16 +8,22 @@ async function createTable() {
         fixed_title TEXT,
         sport TEXT,
         play_year TEXT
-    );`
+    );
+
+    CREATE TABLE IF NOT EXISTS sports (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        fixed_title TEXT,
+    );
+    `
     return await dataAccess.Execute(sql);
 }
 
 async function insertSports() {
     var sql = `
-    CREATE TABLE IF NOT EXISTS sports (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        fixed_title TEXT,
-    );`
+    INSERT INTO sports (fixed_title, sport_id, play_year)
+    VALUES (1, 'Baseball'),
+           (2, 'Football')
+    `;
     return await dataAccess.Execute(sql);
 }
 
@@ -48,7 +54,9 @@ async function startupProcess() {
     if (!schedules.length > 0)
     {
         var inserted = await insertSchedules();
-        console.log(inserted)
+        console.log(inserted);
+        inserted = await insertSports();
+        console.log(inserted);
     }
 }
 
