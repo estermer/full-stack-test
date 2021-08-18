@@ -17,7 +17,7 @@ async function createTable() {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         fixed_title TEXT
     );`
-    
+
     return await dataAccess.Execute(sql);
 }
 
@@ -53,12 +53,18 @@ async function insertSchedules() {
 async function startupProcess() {
     var created = await createTable();
     console.log(created)
+
     var schedules = await dataAccess.GetRows('SELECT * FROM schedules');
     if (!schedules.length > 0)
     {
         var inserted = await insertSchedules();
         console.log(inserted);
-        inserted = await insertSports();
+    }
+  
+    var sports = await dataAccess.GetRows('SELECT * FROM sports');
+    if (!sports.length > 0)
+    {
+        var inserted = await insertSports();
         console.log(inserted);
     }
 }
