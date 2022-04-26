@@ -1,4 +1,4 @@
-# SIDEARM Sports Full-Stack Test
+# Full-Stack Test
 
 Things this test *_is_*:
 * A chance for us to get to see how you approach solving problems
